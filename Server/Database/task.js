@@ -3,7 +3,8 @@ const TaskSchema = new mongoose.Schema(
   {
     type: String,
     Status: Boolean,
-    assigned: { type: mongoose.Types.ObjectId, ref: "user" },
+    assigned: { type: mongoose.Types.ObjectId, ref: "User" },
+    desc: String,
   },
   { timestamps: true }
 );
