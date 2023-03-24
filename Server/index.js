@@ -6,10 +6,13 @@ const config = require("./config/config");
 const { User } = require("./Database/user");
 const { Sprint } = require("./Database/sprint");
 const { Task } = require("./Database/task");
+const { SprintRouter } = require("./Router/SprintRouter");
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+app.use("/sprint", SprintRouter);
 
 const adduser = async () => {
   const user = {

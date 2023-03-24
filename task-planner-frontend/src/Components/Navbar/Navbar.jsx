@@ -7,10 +7,10 @@ function Navbar() {
     <div className={styles.nav}>
       <h1>Task Planner</h1>
       <div>
-        <Link>Create Sprint</Link>
-        <Link>Add Task</Link>
-        <Link>Show Task</Link>
-        <Link>Users</Link>
+        <Link to={"/create_sprint"}>Create Sprint</Link>
+        <Link to={"/addtask"}>Add Task</Link>
+        <Link to={"/alltasks"}>Show Task</Link>
+        <Link to={"/users"}>Users</Link>
       </div>
     </div>
   );
