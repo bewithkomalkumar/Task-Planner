@@ -7,7 +7,7 @@ const ShowTask = () => {
   const [toggle, setToggle] = useState(true);
 
   useEffect(() => {
-    axios.get(`http://localhost:3030/task`).then((res) => {
+    axios.get(`https://faithful-yak-glasses.cyclic.app/task`).then((res) => {
       setTasks(res.data.data);
       console.log(res);
     });
@@ -16,7 +16,7 @@ const ShowTask = () => {
     //console.log(names);
   }, []);
   const getData = () => {
-    axios.get(`http://localhost:3030/task`).then((res) => {
+    axios.get(`https://faithful-yak-glasses.cyclic.app/task`).then((res) => {
       setTasks(res.data.data);
       console.log(res);
     });
@@ -24,17 +24,21 @@ const ShowTask = () => {
 
   const getUser = (id) => {
     let name = "";
-    axios.get(`http://localhost:3030/users/${id}`).then((res) => {
-      console.log(res);
-      name = res.data.user.name;
-      // console.log(res.data.user.name);
-      return name;
-    });
+    axios
+      .get(`https://faithful-yak-glasses.cyclic.app/users/${id}`)
+      .then((res) => {
+        console.log(res);
+        name = res.data.user.name;
+        // console.log(res.data.user.name);
+        return name;
+      });
   };
 
   const changeStatus = (id) => {
     axios
-      .post(`http://localhost:3030/addtask/update_status`, { id })
+      .post(`https://faithful-yak-glasses.cyclic.app/addtask/update_status`, {
+        id,
+      })
       .then((res) => {
         console.log(res);
       })

@@ -6,7 +6,7 @@ const AddTask = () => {
   const [sprint, setSprint] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3030/sprint`).then((res) => {
+    axios.get(`https://faithful-yak-glasses.cyclic.app/sprint`).then((res) => {
       //console.log(res);
       setSprint(res.data.data);
     });

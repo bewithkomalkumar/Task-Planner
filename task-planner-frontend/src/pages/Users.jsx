@@ -5,7 +5,7 @@ const Users = () => {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3030/user`).then((res) => {
+    axios.get(`https://faithful-yak-glasses.cyclic.app/user`).then((res) => {
       setUser(res.data.data);
     });
   }, []);

@@ -14,7 +14,7 @@ const CreateSprint = () => {
   const CreateSprint = () => {
     if (month !== "" && week !== "") {
       axios
-        .post(`http://localhost:3030/sprint/create_sprint`, {
+        .post(`https://faithful-yak-glasses.cyclic.app/sprint/create_sprint`, {
           month,
           week: Number(week),
         })

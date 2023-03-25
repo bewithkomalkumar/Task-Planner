@@ -10,7 +10,7 @@ const AddTaskToSprint = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://localhost:3030/user`).then((res) => {
+    axios.get(`https://faithful-yak-glasses.cyclic.app/user`).then((res) => {
       setUser(res.data.data);
       console.log(res);
     });
@@ -28,7 +28,7 @@ const AddTaskToSprint = () => {
   const CreateTask = () => {
     if (type !== "" && assigned !== "" && desc !== "") {
       axios
-        .post(`http://localhost:3030/addtask/create_task`, {
+        .post(`https://faithful-yak-glasses.cyclic.app/addtask/create_task`, {
           type,
           assigned,
           desc,
@@ -46,8 +46,7 @@ const AddTaskToSprint = () => {
   };
   return (
     <div>
-      AddTaskToSprint
-      <h1>{id}</h1>
+      <h1>Add Task To Sprint</h1>
       <select onChange={handleType}>
         <option value="">Select Type of Task</option>
         <option value="Bug">Bug</option>
