@@ -46,7 +46,9 @@ const adduser = async () => {
     console.log(error);
   }
 };
-
+app.get("/", async (req, res) => {
+  res.send({ Status: "working" });
+});
 app.get("/sprint", async (req, res) => {
   try {
     const data = await Sprint.find();
