@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const TaskSchema = new mongoose.Schema(
   {
     type: String,
-    Status: Boolean,
+    status: Boolean,
     assigned: { type: mongoose.Types.ObjectId, ref: "User" },
     desc: String,
   },

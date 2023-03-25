@@ -7,12 +7,16 @@ const { User } = require("./Database/user");
 const { Sprint } = require("./Database/sprint");
 const { Task } = require("./Database/task");
 const { SprintRouter } = require("./Router/SprintRouter");
+const { TaskRouter } = require("./Router/TaskRouter");
+const { UserRouter } = require("./Router/UserRouter");
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
 app.use("/sprint", SprintRouter);
+app.use("/Addtask", TaskRouter);
+app.use("/users", UserRouter);
 
 const adduser = async () => {
   const user = {
